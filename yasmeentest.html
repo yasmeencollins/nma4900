@@ -3,7 +3,7 @@
   
 <head>
     <script type="text/javascript" 
-        src="module1.js">
+        src="functions.js">
     </script>
 </head>
   
@@ -20,15 +20,10 @@
   
     <script type="text/javascript">
         function f() {
-            var name = Student.name;
-            var age = Student.age;
-            var dept = Student.dept;
-            var score = Student.score;
+            var name = totalWorks;
+            
   
-            var str = "Name:" + name + "\nAge: "
-                + age + "\nDepartment:" + dept 
-                + "\nScore: " + score;
-  
+            var str = "Name:" + name;
             document.getElementById(
                 'text').innerHTML = str;
         }
