@@ -180,19 +180,19 @@ $( document ).ready(function() {
     $('.slider--prev, .slider--next').click(function() {
 
       var $this = $(this),
-          curLeft = $('.slider').find('.slider--item-left'),
-          curLeftPos = $('.slider').children().index(curLeft),
-          curCenter = $('.slider').find('.slider--item-center'),
-          curCenterPos = $('.slider').children().index(curCenter),
-          curRight = $('.slider').find('.slider--item-right'),
-          curRightPos = $('.slider').children().index(curRight),
-          totalWorks = $('.slider').children().length,
-          $left = $('.slider--item-left'),
-          $center = $('.slider--item-center'),
-          $right = $('.slider--item-right'),
-          $item = $('.slider--item');
-
-      $('.slider').animate({ opacity : 0 }, 400);
+          $slider = $this.closest('.work-lockup').find('.slider'),
+          curLeft = $slider.find('.slider--item-left'),
+          curLeftPos = $slider.children().index(curLeft),
+          curCenter = $slider.find('.slider--item-center'),
+          curCenterPos = $slider.children().index(curCenter),
+          curRight = $slider.find('.slider--item-right'),
+          curRightPos = $slider.children().index(curRight),
+          totalWorks = $slider.children().length,
+          $left = $slider.find('.slider--item-left'),
+          $center = $slider.find('.slider--item-center'),
+          $right = $slider.find('.slider--item-right'),
+          $item = $slider.find('.slider--item');
+      $slider.animate({ opacity : 0 }, 400);
 
       setTimeout(function(){
 
@@ -247,7 +247,7 @@ $( document ).ready(function() {
 
     }, 400);
 
-    $('.slider').animate({ opacity : 1 }, 400);
+    $slider.animate({ opacity : 1 }, 400);
 
     });
 
