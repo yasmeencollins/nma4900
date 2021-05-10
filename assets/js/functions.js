@@ -197,18 +197,18 @@ $( document ).ready(function() {
       setTimeout(function(){
 
       if ($this.hasClass('slider--next')) {
-        if (curLeftPos < totalWorks - 15 && curCenterPos < totalWorks - 15 && curRightPos < totalWorks - 15) {
+        if (curLeftPos < 2 && curCenterPos < 2 && curRightPos < 2) {
           $left.removeClass('slider--item-left').next().addClass('slider--item-left');
           $center.removeClass('slider--item-center').next().addClass('slider--item-center');
           $right.removeClass('slider--item-right').next().addClass('slider--item-right');
         }
         else {
-          if (curLeftPos === totalWorks - 15) {
+          if (curLeftPos === 2) {
             $item.removeClass('slider--item-left').first().addClass('slider--item-left');
             $center.removeClass('slider--item-center').next().addClass('slider--item-center');
             $right.removeClass('slider--item-right').next().addClass('slider--item-right');
           }
-          else if (curCenterPos === totalWorks - 15) {
+          else if (curCenterPos === 2) {
             $left.removeClass('slider--item-left').next().addClass('slider--item-left');
             $item.removeClass('slider--item-center').first().addClass('slider--item-center');
             $right.removeClass('slider--item-right').next().addClass('slider--item-right');
